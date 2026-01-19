@@ -39,7 +39,7 @@
                 <li><a href="#people">People</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#news">News</a></li>
+                <li><a href="#" onclick="openModal('news-modal'); return false;">News</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -99,33 +99,7 @@
     </section>
 
     <!-- News Section -->
-    <section id="news">
-        <div class="container">
-            <h2 class="fade-up">Latest News</h2>
-            <div class="news-item fade-up">
-                <img src="assets/news/ahmed_taibeche_defense.png" alt="Master Proposal Defense" class="news-image">
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span><i class="far fa-calendar-alt"></i> Monday, Jan 19, 2026</span>
-                        <span><i class="far fa-clock"></i> 09:00 - 10:00 AM</span>
-                        <span><i class="fas fa-map-marker-alt"></i> Building 59, Room 1017</span>
-                    </div>
-                    <h3 class="news-title">Master Proposal Defense: Generative AI-Driven UAV Navigation</h3>
-                    <div class="news-info">
-                        <strong>Student:</strong> Ahmed TAIBECHE <br>
-                        <strong>Advisor:</strong> Dr. Brahim Brahmi
-                    </div>
-                    <p style="color: var(--text-secondary); line-height: 1.6;">
-                        Autonomous UAV navigation in GPS-denied, obstacle-filled environments is difficult, especially
-                        for small drones limited to an RGB camera and IMU. This proposal presents a hybrid architecture
-                        pairing deterministic global planning with semantic-aware local control for safer navigation in
-                        complex settings. Simulations in diverse environments show safer, more efficient navigation in
-                        complex, unseen settings.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Research Interests Section -->
     <section id="research">
@@ -531,6 +505,44 @@
                     <p>Saudi Applied Research & Technology</p>
                     <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Baseload Applied
                         Grant (BAG)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Modal -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('news-modal')">&times;</span>
+            <div class="modal-header">
+                <h2>Latest News</h2>
+            </div>
+            <div class="modal-body">
+                <div class="news-item">
+                    <img src="assets/news/ahmed_taibeche_defense.png" alt="Master Proposal Defense" class="news-image">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar-alt"></i> Monday, Jan 19, 2026</span>
+                            <span><i class="far fa-clock"></i> 09:00 - 10:00 AM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Building 59, Room 1017</span>
+                        </div>
+                        <h3 class="news-title">Master Proposal Defense: Generative AI-Driven UAV Navigation</h3>
+                        <div class="news-info">
+                            <strong>Student:</strong> Ahmed TAIBECHE <br>
+                            <strong>Advisor:</strong> Dr. Brahim Brahmi
+                        </div>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            Autonomous UAV navigation in GPS-denied, obstacle-filled environments is difficult,
+                            especially
+                            for small drones limited to an RGB camera and IMU. This proposal presents a hybrid
+                            architecture
+                            pairing deterministic global planning with semantic-aware local control for safer navigation
+                            in
+                            complex settings. Simulations in diverse environments show safer, more efficient navigation
+                            in
+                            complex, unseen settings.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
