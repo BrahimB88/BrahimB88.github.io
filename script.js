@@ -94,3 +94,30 @@ window.onclick = function (event) {
         document.body.style.overflow = '';
     }
 }
+
+// Automatically open modal if URL has a hash for it
+window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+        if (hash.startsWith('#news-')) {
+            openModal('news-modal');
+            setTimeout(() => {
+                const targetEl = document.querySelector(hash);
+                if (targetEl) {
+                    // Find the scrollable container inside the modal
+                    const modalContent = document.querySelector('#news-modal .modal-content');
+                    if (modalContent) {
+                        // Offset the scroll top by the target element's top position
+                        modalContent.scrollTo({
+                            top: targetEl.offsetTop - parseInt(window.getComputedStyle(modalContent).paddingTop || 0) - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }, 300);
+        } else if (hash.startsWith('#project')) {
+            // e.g. #project2
+            openModal(hash.substring(1));
+        }
+    }
+});
